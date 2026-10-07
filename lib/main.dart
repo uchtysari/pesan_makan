@@ -24,7 +24,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true, // Mengaktifkan desain Material 3 terbaru
       ),
       // Menentukan halaman pertama yang muncul saat aplikasi dinyalakan
-      home: const LoginPage(),
+      initialRoute: '/', // Rute awal yang dibuka pertama kali
+      routes: {
+        '/': (context) => const LoginPage(), // Rute '/' mengarah ke LoginPage[cite: 5]
+        '/home': (context) => const MyHomePage(), // Rute '/home' mengarah ke MyHomePage[cite: 5]
+      },
     );
   }
 }
